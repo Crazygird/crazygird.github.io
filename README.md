@@ -1,2 +1,5 @@
 # crazygird.github.io
-my site
+
+UNDER CONSTRUCTION - some things may not work properly.
+
+(temporary readme)
