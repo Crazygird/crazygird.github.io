@@ -1,5 +1,5 @@
 .carousel-wrapper {
-  width: 520px;
+  width: 620px;
   height: 350px;
   display: flex;
   justify-content: center;
@@ -9,18 +9,18 @@
   margin: 100px auto 20px;
 }
 .carousel-container {
-  width: 400px;
+  width: 500px;
   height: 250px;
   overflow: hidden;
   margin: 0 auto;
 }
 .carousel {
   display: flex;
-  width: 1200px;
+  width: 1300px;
   animation: sliding 20s infinite;
 }
 .carousel div {
-  width: 400px;
+  width: 500px;
   height: 250px;
   background-size: cover;
   background-position: center;
@@ -59,18 +59,18 @@
 }
 @media screen and (max-width: 768px) {
   .carousel-wrapper {
-    width: 312px;
+    width: 412px;
     height: 210px;
  }
   .carousel-container {
-    width: 240px;
+    width: 340px;
     height: 150px;
  }
   .carousel {
     width: 720px;
  }
   .carousel > div {
-    width: 240px;
+    width: 340px;
     height: 150px;
  }
   @keyframes sliding {
