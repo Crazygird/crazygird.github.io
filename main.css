@@ -1,0 +1,13 @@
+body{
+    background-color: #333;
+    color:white
+    font-family: 'Roboto', sans-serif;
+}
+button{
+    cursor:pointer
+}
+button:hover {
+    opacity: 1;
+           background-color: rgba(230,230,230,0.5);
+           transition: .2s;
+}
