@@ -1,4 +1,6 @@
 .carousel-wrapper {
+  width: 740px;
+  height: 258px;
   width: 620px;
   height: 350px;
   display: flex;
