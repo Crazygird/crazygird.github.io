@@ -80,16 +80,16 @@
       transform: translateX(0);
    }
     35% {
-      transform: translateX(-240px);
+      transform: translateX(-258px);
    }
     65% {
-      transform: translateX(-240px);
+      transform: translateX(-258px);
    }
     70% {
-      transform: translateX(-480px);
+      transform: translateX(-516px);
    }
     98% {
-      transform: translateX(-480px);
+      transform: translateX(-516px);
    }
     100% {
       transform: translateX(0);
