@@ -1,6 +1,6 @@
 # crazygird.github.io
 
-## Visits:   [![HitCount](https://hits.dwyl.com/Crazygird/Crazygirdgithubio.svg?style=flat-square&show=unique)](http://hits.dwyl.com/Crazygird/Crazygirdgithubio)
+## Visits:     ![visitors](https://page-views.glitch.me/badge?page_id=page.id)
 
 
 UNDER CONSTRUCTION - some things may not work properly.
