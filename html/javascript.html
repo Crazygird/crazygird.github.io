@@ -13,6 +13,16 @@
           h2{color:white}
           h3{color:white}
           a{color:white}
+
+
+          code {
+            font-family: Consolas,"courier new";
+            color: rgb(63, 63, 63);
+            background-color: rgb(188, 188, 188);
+            padding: 2px;
+            font-size: 105%;
+            border-radius: 25px;
+        }
            </style>
         <body>
             <h1>Javascript</h1>
@@ -27,8 +37,8 @@
 
         <h2>Website say something</h2>
         <h3>These were originally made at <a href="https://github.com/bluehalooo/websitesaysomething" target=”_blank”>github by bluehalooo.</a></h3>
-        <p>Make a website say anything <br> var websitesaysomethingprompt = prompt("What do you want the website to say?");alert(websitesaysomethingprompt); <br></p>
-        <p>Make a website say 'hell' <br>alert("hell"); <br> </p>
+        <p>Make a website say anything <br> <br> <code>var websitesaysomethingprompt = prompt("What do you want the website to say?");alert(websitesaysomethingprompt); </code><br></p>
+        <p>Make a website say 'hell' <br> <br> <code>alert("hell");</code> <br> </p>
         <p>Make a website ask for your credit card number (this will not be saved anywhere) <br> var thisdoesn = prompt("Give me your credit card number");</p>
         <h2>Fun Hacks</h2>
         <p>Make all images fly around <br> R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=200; DI=document.getElementsByTagName("img"); DIL=DI.length; function A(){for(i=0; i-DIL; i++){DIS=DI[ i ].style; DIS.position='absolute'; DIS.left=(Math.tan(R*x1+i*x2+x3)*x4+x5)+"px"; DIS.top=(Math.sin(R*y1+i*y2+y3)*y4+y5)+"px"}R++}setInterval('A()',5); void(0);</p>
