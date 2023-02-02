@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>about:blank</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="js/Clicker.js"></script>
+
+        <button onclick="ClickMe();" id="ClickMe">Click Me</button>
+        <p id="Score"></p>
+        <p id = "pointsPerSecond"></p>
+        <p id = "Level"></p>
+        <p id = "ClickPower"></p>
+        <p id = "Overclock"></p>
+        <hr/>
+        <button onclick="Overclock();">Overclock to double points per second for 100 seconds. It costs 1000 times your points per second.</button>
+        <hr/>
+        <h3>Level 1</h3>
+        <ul>
+            <li><button onclick="BuyClickPower(1, 1);">1 point more per click costs 2</button></li>
+            <li><button onclick="BuyPerSecond(1, 1);">1 Point more per second costs 3</button></li>
+            <li><button onclick="BuyClickPower(5, 1);">5 points more per click costs 10</button></li>
+            <li><button onclick="BuyPerSecond(10, 1);">10 Points more per second costs 30</button></li>
+            <li><button onclick="BuyPerSecond(50, 1);">50 Points more per second costs 150</button></li>
+            <li><button onclick="BuyPerSecond(100, 1);">100 Points more per second costs 300</button></li>
+            <li><button onclick="BuyClickPower(250, 1);">250 points more per click costs 500</button></li>
+            <li><button onclick="BuyPerSecond(200, 1);">200 Points more per second costs 600</button></li>
+            <li><button onclick="BuyPerSecond(500, 1);">500 Points more per second costs 1500</button></li>
+            <li><button onclick="BuyPerSecond(1000, 1);">1000 Points more per second costs 3000</button></li>
+        </ul>
+
+        <button onclick="BuyLevel(10000, 2);">If you have 10000 points you can get level 2</button>
+
+        <h3 id="Level2">Level 2</h3>
+
+        <ul id="Level2things">
+            <li><button onclick="BuyClickPower(1000, 2);">1000 points more per click costs 2000</button></li>
+            <li><button onclick="BuyClickPower(5000, 2);">5000 points more per click costs 10000</button></li>
+            <li><button onclick="BuyPerSecond(10000, 2)">10000 Points more per second costs 30000</button></li>
+            <li><button onclick="BuyClickPower(15000, 2);">15000 points more per click costs 30000</button></li>
+            <li><button onclick="BuyPerSecond(15000, 2)">15000 Points more per second costs 45000</button></li>
+            <li><button onclick="BuyPerSecond(20000, 2)">20000 Points more per second costs 60000</button></li>
+            <li><button onclick="BuyPerSecond(50000, 2)">50000 Points more per second costs 150000</button></li>
+        </ul>
+
+        <button onclick="BuyLevel(1000000, 3);">If you have 1000000 points you can get level 3</button>
+
+        <h3>Level 3</h3>
+
+        <ul>
+            <li><button onclick="BuyClickPower(500000, 3);">500000 points more per click costs 1000000</button></li>
+            <li><button onclick="BuyPerSecond(1000000, 3);">1000000 Points more per second costs 3000000</button></li>
+            <li><button onclick="BuyClickPower(1500000, 3);">1500000 points more per click costs 3000000</button></li>
+            <li><button onclick="BuyPerSecond(2000000, 3);">2000000 Points more per second costs 6000000</button></li>
+            <li><button onclick="BuyPerSecond(5000000, 3);">5000000 Points more per second costs 15000000</button></li>
+            <li><button onclick="BuyPerSecond(10000000, 3);">10000000 Points more per second costs 30000000</button></li>
+        </ul>
+
+        <button onclick="Complete(1000000000000)">Get 1000000000000 points to claim victory, once you do press this button</button>
+
+        <h1 id="status" class="header"></h1>
+    </body>
+</html>
