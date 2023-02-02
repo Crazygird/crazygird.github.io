@@ -14,9 +14,45 @@
         a{
           color:white;
         }
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
       </style>
       </head>
       <body>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/html/about.html">About</a></li>
+          <li><a href="/html/html tools/html tools.html">HTML Tools</a></li>
+          <li><a href="/html/javascript.html">Javascript</a></li>
+        </ul>
         <a href="cursors"><h2>Cursors</h2></a>
         <a href="texttypes"><h2>Text Types</h2></a>
       
