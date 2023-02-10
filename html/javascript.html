@@ -87,6 +87,12 @@ li a:hover {
         <p>Break Your Screen to fix press powerbutton restart. <br> <code>for (let i = 0; i < 1; i) {location.reload();}</code></p>
         <p>Make the screen flash rainbow because why not? <br><code>var rainbow=document.createElement("div");rainbow.style.position="absolute",rainbow.style.top="0",rainbow.style.left="0",rainbow.style.width="100%",rainbow.style.height="100%",rainbow.style.zIndex="9999",rainbow.style.pointerEvents="none",rainbow.style.opacity="0.5",document.body.appendChild(rainbow);var colors=["red","orange","yellow","green","blue","indigo","violet"],i=0;setInterval((function(){rainbow.style.backgroundColor=colors[i],i=(i+1)%colors.length}),100);</code><p>
         <p>Open a tab without history<br/><code>var site = prompt("What site do you want to go to"); window.open(site, "_blank");</code></p>
+        <p>Takes the link you are on, and opens it on an about:blank (locally) <br> <code>            let self = window;
+          var x = window.open("");
+          var index = prompt("Paste the link");
+          self.close();
+          x.document.write("<iframe src=index style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;'></iframe>");
+//whoah.</code></p>
         </body>
     </head>
 </html>
