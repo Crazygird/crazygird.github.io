@@ -180,13 +180,13 @@ function updateScore() {
 }
 
 function keyPress(code) {
-	if(code === 37 || code === 74) {
+	if(code === 37 || code === 74 || code === 87) {
 		moveGrid(3); // left
-	} else if(code === 38 || code === 73) { 
+	} else if(code === 38 || code === 73 || code === 65) { 
 		moveGrid(1); // up
-	} else if(code === 39 || code === 76) {
+	} else if(code === 39 || code === 76 || code === 68) {
 		moveGrid(2); // right
-	} else if(code === 40 || code === 75) {
+	} else if(code === 40 || code === 75 || code === 83) {
 		moveGrid(4); // down
 	}
 }
