@@ -194,13 +194,13 @@ function updateBest(p) {
 }
 
 function keyPress(code) {
-	if(code === 74) {
+	if(code === 65) {
 		moveGrid(0, 3); // left
-	} else if(code === 73) { 
+	} else if(code === 87) { 
 		moveGrid(0, 1); // up
-	} else if(code === 76) {
+	} else if(code === 68) {
 		moveGrid(0, 2); // right
-	} else if(code === 75) {
+	} else if(code === 83) {
 		moveGrid(0, 4); // down
 	}
 
