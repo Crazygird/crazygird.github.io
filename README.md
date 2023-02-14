@@ -1,5 +1,7 @@
 # crazygird.github.io
 
+**Attention! games were removed for the time being.**
+
 Cool site to take a break and play some games or do some work!
 
 
@@ -11,7 +13,6 @@ Still under construction.
 
 Features:
 
-Games!
 
 Some useful gadgets, like a guide to coding or some javascript bookmarklets.
 
