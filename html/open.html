@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Crazygird - Tools</title>
+    </head>
+    <body>
+        <iframe id="place" style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;'></iframe>
+        <script>
+            var frame = document.getElementById('place');
+            var place = prompt("where");
+            frame.setAttribute('src', "https://www.bing.com/search?q="+place);
+        </script>
+    </body>
+</html>
