@@ -35,13 +35,18 @@ li a {
 li a:hover {
   background-color: #111;
 }
+
+.zoom{
+  transition: transform .2s;
+}
+
+
 button{
   cursor:pointer
+  
 }
-button:hover {
-  background-color: #000;
-/*  Making button bigger on hover  */
-  transform: scale(1.5) perspective(1px)
+.zoom:hover {
+  transform: scale(1.1);
 }
 
 .active {
