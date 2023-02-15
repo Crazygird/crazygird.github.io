@@ -2,6 +2,8 @@
 
 **``` potato```**
 
+*rh.codeacademy.gq has been reported!*
+
 **We are not responsible for your actions on the site.**
 
 Cool site to take a break or do some work!
