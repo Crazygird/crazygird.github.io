@@ -14,4 +14,4 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-We don't use much data here. If you spot a vulnerablitity, you can attach it to the issues page. We update it quite often and not a lot of people go to the site
+If you find a vulnerablity, you should be able to go to the security tab and report it there.
