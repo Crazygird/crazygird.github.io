@@ -2,6 +2,8 @@
 
 **Attention! games were removed since this site was not meant for people to use to play games.**
 
+**We are not responsible for you actions on the site.**
+
 Cool site to take a break or do some work!
 
 
