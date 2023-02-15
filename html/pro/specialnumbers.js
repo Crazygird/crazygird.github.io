@@ -80,3 +80,15 @@ function prime(x){
             return(true)
         }
      }
+
+
+     var checkprime = document.getElementById("isprime")
+     var button = document.getElementById("button")
+     var output = document.getElementById("prime")
+     button.addEventListener("click", function() {
+        var asdf = document.createElement("p")
+        asdf.innerHTML = prime(checkprime.value);
+        output.appendChild(asdf);
+
+     })
+
