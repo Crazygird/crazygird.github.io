@@ -126,3 +126,9 @@ enforcement ladder](https://github.com/mozilla/diversity).
 For answers to common questions about this code of conduct, see the FAQ at
 https://www.contributor-covenant.org/faq. Translations are available at
 https://www.contributor-covenant.org/translations.
+
+## Our Positions ##
+
+We are not responsible for any of your actions on the site. This site is
+for educational purposes only. Please do not abuse the site in any way.
+Should you be involved in trouble, we are not responsible at all.
