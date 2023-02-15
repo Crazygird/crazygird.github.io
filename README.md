@@ -1,6 +1,6 @@
 # crazygird.github.io
 
-**Attention! games were removed since this site was not meant for people to use to play games.**
+**``` potato```**
 
 **We are not responsible for you actions on the site.**
 
