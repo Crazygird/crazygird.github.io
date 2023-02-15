@@ -2,7 +2,7 @@
 
 **``` potato```**
 
-**We are not responsible for you actions on the site.**
+**We are not responsible for your actions on the site.**
 
 Cool site to take a break or do some work!
 
