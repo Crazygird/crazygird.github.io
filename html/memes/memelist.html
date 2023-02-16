@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Crazygird - memes</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <style>
+      body {
+        background-color: #2b2d31;
+        font-family: 'Roboto', sans-serif;
+      } 
+      ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  opacity: 1;
+  background-color: #111;
+  transition: .2s;
+}
+
+
+.active {
+  background-color: white;
+  color:#333
+}
+    </style>
+    </head>
+    <body>
+        <img id="image" width="80%" height="80%" alt="memes">
+        <script>
+            var index = 0;
+            const memes = [
+                "MemeFolder/parkour.png",
+                "MemeFolder/bird.jpeg",
+            ]
+
+            document.addEventListener('keypress', (event) => {
+                
+                if (memes[index + 1] == null) index = 0;
+                else index += 1;
+
+            }, false);
+
+            var myInterval = setInterval(() => {
+
+                document.getElementById("image").src = memes[index];
+
+            }, 10)
+
+        </script>
+    </body>
+</html>

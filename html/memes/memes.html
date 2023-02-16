@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Crazygird - memes</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <style>
+            body {
+              background-color: #2b2d31;
+              font-family: 'Roboto', sans-serif;
+            } 
+            ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      li a:hover {
+        opacity: 1;
+        background-color: #111;
+        transition: .2s;
+      }
+      
+      
+      .active {
+        background-color: white;
+        color:#333
+        }
+        body {
+        background-color: #2b2d31;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      button:hover {
+        opacity: 1;
+        background-color: rgba(230, 230, 230, 0.5);
+        transition: .2s;
+        size: 110%;
+      }
+
+      a {
+        color: white
+      }
+
+      .glow {
+        font-size: 80px;
+        color: #ffffff;
+        text-align: center;
+        animation: glow 1s ease-in-out infinite alternate;
+        text-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 10px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 20px #fff, 0 0 40px #fff;
+      }
+
+      .center-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 50vh;
+      }
+
+      .glassrectangle {
+      height: 300px;
+      width: 600px;
+      background-color: #555;
+      background: rgba(232, 255, 250, 0.4);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8.4px);
+      -webkit-backdrop-filter: blur(8.4px);
+      z-index: 100;
+      }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/html/about">About</a></li>
+            <li><a href="/html/html tools/html tools">Coding Tools</a></li>
+            <li><a href="/html/javascript">Javascript</a></li>
+            <li><a href="/html/Local.html">Run Locally</a></li>
+        </ul>
+            <a href="memelist.html">
+                <button class="zoom" id="about" style="width: 480px; height: 100px; border-radius: 5px; margin-left: 14px; border-width: 0;  font-size: 80px; font-family: 'JetBrains+Mono', sans-serif; font-weight: 150;">Go to Memes</button>
+            </a>
+        </ul>
+    </body>
+</html>
