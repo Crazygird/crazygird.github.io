@@ -96,6 +96,29 @@ li a:hover {
           self.close();
           x.document.write("	&lt;iframe src= style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;'&gt;	&lt;/iframe&gt;");
 //whoah.</code></p>
+<br><p>Lets any page be in dark mode <code>(function() {
+  var css = 'html {-webkit-filter: invert(100%);' +
+    '-moz-filter: invert(100%);' +
+    '-o-filter: invert(100%);' +
+    '-ms-filter: invert(100%); }',
+    head = document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+  if (!window.counter) {
+    window.counter = 1;
+  } else {
+    window.counter++;
+    if (window.counter % 2 == 0) {
+      var css = 'html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%); }'
+    }
+  }
+  style.type = 'text/css';
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+  head.appendChild(style);
+})();</code></p>
         </body>
     </head>
 </html>
