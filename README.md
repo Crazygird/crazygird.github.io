@@ -24,4 +24,4 @@ Under construction:
 Production: Little tools to help you do things
 Messaging system: A friendly (hopefully) chatroom!
 
-Memes coming soon!
+We got memes!!!
