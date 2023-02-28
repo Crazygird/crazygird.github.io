@@ -108,7 +108,51 @@
     backdrop-filter: blur(8.4px);
     -webkit-backdrop-filter: blur(8.4px);
     z-index: 100;
-    }</style>
+    }
+    
+    .shape {
+    position: absolute;
+    opacity: 0.2;
+    animation: rotate 8s linear infinite;
+    transform-origin: center;
+  }
+  
+  /* define the keyframes for the rotation animation */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* create a few different shapes with different opacity and rotation */
+  .shape1 {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: 100px;
+    left: 100px;
+  }
+  
+  .shape2 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 300px;
+    left: 400px;
+  }
+  
+  .shape3 {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 500px;
+    left: 200px;
+  }
+    
+    </style>
   </head>
   <body>
 
