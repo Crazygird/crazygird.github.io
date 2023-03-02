@@ -41,7 +41,7 @@ app.post('/', async (req, res) => {
 
   } catch (error) {
     // console.error(process.env.OPENAI_API_KEY,"error")
-    res.status(500).send(error || 'Something went wrong');
+    res.status(500).send(error || 'Error');
   }
 })
 
