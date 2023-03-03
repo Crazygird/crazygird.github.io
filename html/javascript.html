@@ -70,30 +70,21 @@ li a:hover {
            </style></head>
         <body>
           <script>
-           
-            function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-            var myInterval = setInterval(() => {
-              var value = document.getElementById("Pass").value
-
+            function openWindowAndSendMessage() {
+              var x = window.open("potato.html", "_blank");
+              x.postMessage("games", "*");
+              setTimeout(() => {
+                x.close();
+              }, 100);
+            }
+            
+            setInterval(() => {
+              var value = document.getElementById("Pass").value;
               if (value == "games") {
-
-                var x = window.open("potato.html", "_blank")
-
-                x.postMessage("Games", "*")
-                                
-                  sleep(100)
-                  
-                  window.close()
-
-
+                openWindowAndSendMessage();
               }
-                
-
-            }, 100)
-          </script>
+            }, 100);
+            </script>
             <ul>
                 <li><a href="/index">Home</a></li>
                 <li><a href="/html/about">About</a></li>
