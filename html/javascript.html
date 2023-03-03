@@ -70,10 +70,11 @@ li a:hover {
            </style></head>
         <body>
           <script>
-            var pass = document.getElementById("Pass")
+            
             var myInterval = setInterval(() => {
+              var value = document.getElementById("Pass").value
 
-              if (pass.value == "games") {
+              if (pass == "games") {
 
                 window.open("https://crazygird.github.io/html/pro/primealt", "_self")
 
