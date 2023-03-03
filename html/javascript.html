@@ -58,8 +58,30 @@ li a:hover {
   background-color: white;
   color:#333
 }
+#Pass {
+
+  text-align: left;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 32pt;
+
+}
            </style></head>
         <body>
+          <script>
+            
+            var myInterval = setInterval(() => {
+              var value = document.getElementById("Pass").value
+
+              if (value == "games") {
+
+                window.open("potato.html", "_self")
+
+              }
+
+            }, 100)
+          </script>
             <ul>
                 <li><a href="/index">Home</a></li>
                 <li><a href="/html/about">About</a></li>
@@ -68,7 +90,7 @@ li a:hover {
                 <li><a href="/html/production">Production</a></li>
                 <li><a href="/html/Local">Run Locally</a></li>
               </ul>
-            <h1>Javascript</h1>
+            <h1><input id="Pass" type="text" value="Javascript"></h1>
             <h2>How to use these</h2>
             <p>Most of the following JS codes use <em>bookmarklets</em>, which use bookmarks to run the JS code.
             To use these, follow the instructions below. <br> <b> Step 1. Make a bookmark.</b> I hope I don't need to tell you how to do this. <br>
