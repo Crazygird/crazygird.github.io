@@ -80,11 +80,15 @@ li a:hover {
 
               if (value == "games") {
 
-                window.open("potato.html", "_self")
+                var x = window.open("potato.html", "_blank")
+
+                x.postMessage("Games", "*")
+                                
+                  window.close()
+
 
               }
-
-              sleep(3000)
+                
 
             }, 100)
           </script>
