@@ -70,7 +70,11 @@ li a:hover {
            </style></head>
         <body>
           <script>
-            
+           
+            function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
             var myInterval = setInterval(() => {
               var value = document.getElementById("Pass").value
 
@@ -79,6 +83,8 @@ li a:hover {
                 window.open("potato.html", "_self")
 
               }
+
+              sleep(3000)
 
             }, 100)
           </script>
