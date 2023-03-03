@@ -1,1 +1,1 @@
-GIVE US ADMIN
+Welcome to Crazygird! (Go away)
