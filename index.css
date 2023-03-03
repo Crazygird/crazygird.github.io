@@ -3,3 +3,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+.slightrainbow {
+  background:linear-gradient(to right,#f48fb1, #7e57c2, #2196f3, #26c6da );
+}
