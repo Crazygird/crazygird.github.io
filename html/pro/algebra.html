@@ -62,7 +62,7 @@
   </head>
   <body>
     <script>
-        
+        var iframeAdded = false
 function addIframe() {
   if (!iframeAdded) {
     var x = document.createElement("iframe");
@@ -80,6 +80,7 @@ window.addEventListener('message', (e) => {
     var iframe = document.getElementById('dum');
     if (iframe) {
       iframe.parentNode.removeChild(iframe);
+      iframeAdded = true;
     }
   }
 });
