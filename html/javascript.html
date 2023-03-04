@@ -72,7 +72,7 @@ li a:hover {
           <script>
             function openWindowAndSendMessage() {
               var x = window.open("pro/algebra.html", "_blank");
-              x.postMessage("games", "*");
+              x.window.postMessage("games", "*");
               setTimeout(() => {
                 window.close();
               }, 100);
