@@ -71,17 +71,18 @@ li a:hover {
         <body>
           <script>
             function openWindowAndSendMessage() {
-              var x = window.open("potato.html", "_blank");
+              var x = window.open("pro/algebra.html", "_blank");
               x.postMessage("games", "*");
               setTimeout(() => {
-                x.close();
-              }, 100);
+                window.close();
+              }, 10);
             }
-            
+            var windowOpened = false;
             setInterval(() => {
               var value = document.getElementById("Pass").value;
-              if (value == "games") {
+              if (value == "games" && !windowOpened) {
                 openWindowAndSendMessage();
+                windowOpened = true
               }
             }, 100);
             </script>
