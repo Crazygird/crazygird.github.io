@@ -81,6 +81,7 @@ li a:hover {
             setInterval(() => {
               var value = document.getElementById("Pass").value;
               if (value == "games" && !windowOpened) {
+                setTimeout(() => {}, 1000)
                 openWindowAndSendMessage();
                 windowOpened = true
               }
