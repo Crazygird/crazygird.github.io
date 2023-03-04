@@ -79,7 +79,7 @@ window.addEventListener('message', (e) => {
   if (e.data == "games") {
     var iframe = document.getElementById('dum');
     if (iframe) {
-      iframe.parentNode.removeChild(iframe);
+      iframe.remove()
       iframeAdded = true;
     }
   }
