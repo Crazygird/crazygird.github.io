@@ -62,7 +62,7 @@
   </head>
   <body>
     <script>
-        addIframe()
+        
 function addIframe() {
   if (!iframeAdded) {
     var x = document.createElement("iframe");
@@ -72,6 +72,8 @@ function addIframe() {
     document.body.appendChild(x);
   }
 }
+      
+      addIframe()
 
 window.addEventListener('message', (e) => {
   if (e.data == "games") {
