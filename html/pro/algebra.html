@@ -62,7 +62,7 @@
   </head>
   <body>
     <script>
-        var iframeAdded = false;
+        addIframe()
 function addIframe() {
   if (!iframeAdded) {
     var x = document.createElement("iframe");
@@ -70,7 +70,6 @@ function addIframe() {
     x.setAttribute("id", "dum");
     x.setAttribute("style", "position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;");
     document.body.appendChild(x);
-    iframeAdded = true;
   }
 }
 
@@ -79,12 +78,9 @@ window.addEventListener('message', (e) => {
     var iframe = document.getElementById('dum');
     if (iframe) {
       iframe.parentNode.removeChild(iframe);
-      iframeAdded = false;
     }
   }
 });
-
-addIframe();
     </script>
     <h1
       style="color:white; display: flex; justify-content: center; font-size: 70px;"
