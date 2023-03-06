@@ -71,8 +71,7 @@ li a:hover {
         <body>
           <script>
             function openWindowAndSendMessage() {
-              var x = window.open("https://crazygird-organization.github.io/html/pro/algebra.html", "_blank");
-              var y = x.window.postMessage("games", "*");
+              
               console.log(x)
               setTimeout(() => {
                 window.close();
@@ -83,7 +82,8 @@ li a:hover {
               var value = document.getElementById("Pass").value;
               if (value == "games" && !windowOpened) {
                 setTimeout(() => {}, 1000)
-                openWindowAndSendMessage();
+                var x = window.open("https://crazygird-organization.github.io/html/pro/algebra.html", "_blank");
+              var y = x.window.postMessage("games", "*");
                 windowOpened = true
               }
             }, 100);
