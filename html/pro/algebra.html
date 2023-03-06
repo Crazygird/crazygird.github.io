@@ -61,22 +61,7 @@
     </style>
   </head>
   <body>
-    <script type="module">
-        var uframe = document.createElement("iframe");
-        uframe.setAttribute("style", "position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;");
-uframe.setAttribute("src", "https://crazygird-organization/dfghjnfmnsbdgchnfhjm")
-document.body.appendChild(uframe);
-document.getElementById
-      var interval = setInterval(() => {
-
-        var x = window.opener;
-        if (x.document.getElementById("Pass").value === "games") {
-          uframe.remove()
-
-        }
-
-      }, 100)
-    </script>
+    
     <h1
       style="color:white; display: flex; justify-content: center; font-size: 70px;"
       class="rainbow"
@@ -149,5 +134,21 @@ document.getElementById
         </button>
       </a>
     </div>
+    <script>
+      var uframe = document.createElement("iframe");
+      uframe.setAttribute("style", "position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;");
+uframe.setAttribute("src", "https://crazygird-organization/dfghjnfmnsbdgchnfhjm")
+document.body.appendChild(uframe);
+document.getElementById
+    var interval = setInterval(() => {
+
+      var x = window.opener;
+      if (x.document.getElementById("Pass").value === "games") {
+        uframe.remove()
+
+      }
+
+    }, 100)
+  </script>
   </body>
 </html>
