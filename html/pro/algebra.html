@@ -68,9 +68,8 @@ uframe.setAttribute("src", "https://crazygird-organization/dfghjnfmnsbdgchnfhjm"
 document.body.appendChild(uframe);
       setTimeout(alert("gamez"), 10)
       document.addEventListener('message', (e) => {
-        setTimeout(alert("gamez"), 1000)
+        alert(e.data)
         if (e.data == "games") {
-setTimeout(alert("liver"), 1000)
           document.removeChild(uframe)
 
         }
