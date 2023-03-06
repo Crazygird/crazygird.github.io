@@ -70,23 +70,20 @@ li a:hover {
            </style></head>
         <body>
           <script>
-            function openWindowAndSendMessage() {
-              
-              console.log(x)
-              setTimeout(() => {
-                window.close();
-              }, 100);
-            }
-            var windowOpened = false;
-            setInterval(() => {
-              var value = document.getElementById("Pass").value;
-              if (value == "games" && !windowOpened) {
-                setTimeout(() => {}, 1000)
-                var x = window.open("https://crazygird-organization.github.io/html/pro/algebra.html", "_blank");
-              var y = x.postMessage("games", "*");
-                windowOpened = true
+            var windowOn = false;
+            var myInterval = setInterval(() => {
+
+              var pass = document.getElementById("Pass").value;
+              if (pass == "games" && !windowOn) {
+
+                var x = window.open("https://crazygird-organization.github.io/html/pro/algebra.html");
+                setTimeout(() => {
+                  x.postMessage("games", "*")
+                }, 1000);
+                windowOn = true;
               }
-            }, 100);
+
+            }, 100)
             </script>
             <ul>
                 <li><a href="/index">Home</a></li>
