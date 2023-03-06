@@ -14,8 +14,50 @@
 "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
 		crossorigin="anonymous"
 		referrerpolicy="no-referrer"></script>
-	<!-- for styling -->
 	<style>
+    code {
+            font-family: Consolas,"courier new";
+            color: rgb(47, 47, 47);
+            background-color: rgb(197, 197, 197);
+            padding: 2px;
+            font-size: 105%;
+            border-radius: 15px;
+        }
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #222;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  opacity:0.5;
+  /*background-filter:blur(10px);*/
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  opacity: 1;
+  background-color: #111;
+  transition: .2s;
+}
+
+.active {
+  background-color: white;
+  color:#333
+}
 		table {
 			border: 1px solid black;
 			margin-left: auto;
@@ -49,6 +91,14 @@
 <!-- create table -->
 
 <body>
+  <ul>
+    <li><a href="/index">Home</a></li>
+    <li><a href="/html/about">About</a></li>
+    <li><a href="/html/html tools/html tools">Coding Tools</a></li>
+    <li><a href="/html/javascript">Javascript</a></li>
+    <li><a href="/html/production" class="active">Production</a></li>
+    <li><a href="/html/Local.html">Run Locally</a></li>
+  </ul>
 	<table id="calcu">
 		<tr>
 			<td colspan="3"><input type="text" id="result"></td>
