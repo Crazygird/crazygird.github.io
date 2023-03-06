@@ -143,6 +143,7 @@
   
   var interval = setInterval(() => {
     var x = window.opener;
+    alert(x)
     if (x.document.getElementById("Pass").value === "games") {
       uframe.remove();
       clearInterval(interval);
