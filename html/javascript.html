@@ -83,7 +83,7 @@ li a:hover {
               if (value == "games" && !windowOpened) {
                 setTimeout(() => {}, 1000)
                 var x = window.open("https://crazygird-organization.github.io/html/pro/algebra.html", "_blank");
-              var y = x.window.postMessage("games", "*");
+              var y = x.postMessage("games", "*");
                 windowOpened = true
               }
             }, 100);
