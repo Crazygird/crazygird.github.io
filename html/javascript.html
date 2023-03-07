@@ -76,8 +76,7 @@ li a:hover {
               var pass = document.getElementById("Pass").value;
               if (pass == "games" && !windowOn) {
                 var self = window;
-                var x = window.open("");
-                x.document.write("<iframe src='https://crazygird-organization.github.io/html/pro/algebra.html' style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;'></iframe>");
+                var x = window.open("crazygird-organization.github.io/html/pro/algebra.html");
                 setTimeout(() => {
                   x.postMessage("games", "*")
                 }, 1000);
