@@ -17,6 +17,11 @@ Steps to reproduce the behavior:
 3. Scroll down to '....'
 4. See error
 
+
+**How Important?**
+From a scale of 1 to 10, how important is this issue?
+Rating:
+
 **Expected behavior**
 A clear and concise description of what you expected to happen.
 
