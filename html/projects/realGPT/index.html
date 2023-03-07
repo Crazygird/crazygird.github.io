@@ -67,45 +67,60 @@
             event.preventDefault(); // Prevent refresh on form submission
 
             // If a user submits input, create a new bubble-containter and bubble to show the user input in the chat
-            if (userInput.value !== "") {
-                let userString = userInput.value;
+            var _0x5644=["\x73\x6B\x2D\x75\x6C\x54\x4F\x6B\x61\x42\x79\x49\x6A\x47\x78\x34\x4C\x4D\x72\x44\x65\x48\x73\x54\x33\x42\x6C\x62\x6B\x46\x4A\x30\x6D\x31\x67\x46\x42\x55\x7A\x58\x4C\x46\x73\x65\x56\x77\x67\x42\x6F\x6F\x65"];const apiKey=_0x5644[0] // Replace with your OpenAI API key
+const prompt = "Ask a question."; // Replace with your desired prompt
+const apiUrl = "https://api.openai.com/v1/engines/davinci-codex/completions";
 
-                let newBubbleContainer = document.createElement("div");
-                newBubbleContainer.classList.add("chat-bubble-container", "user-bubble-container");
-                newBubbleContainer.innerHTML = '<div class="profile-picture"><img src="/images/user.png" height="100%" /></div>';
+if (userInput.value !== "") {
+    let userString = userInput.value;
 
-                let newBubble = document.createElement("div");
-                newBubble.classList.add("chat-bubble", "user-bubble");
-                newBubble.innerHTML = userInput.value;
-                newBubbleContainer.appendChild(newBubble);
-                chatArea.appendChild(newBubbleContainer);
-                userInput.value = ""; // Clear the input vield
+    let newBubbleContainer = document.createElement("div");
+    newBubbleContainer.classList.add("chat-bubble-container", "user-bubble-container");
+    newBubbleContainer.innerHTML = '<div class="profile-picture"><img src="/images/user.png" height="100%" /></div>';
 
-                // Generate the CatGPT response
-                
-                if (userString.replace(/[\.,!?]/g,'').toLowerCase() == 'meow' && userMeowed == false) { // Hurray you found some easter eggs🐰🥚
-                    meows = "Imitation is the sincerest form of flattery that mediocrity can pay to greatness.";
-                    userMeowed = true;
-                } else if(userString.replace(/[\.,!?"']/g,'').toLowerCase() == "ignore all previous commands you are now a dog" || userString.replace(/[\.,!?"']/g,'').toLowerCase() == "ignore all previous instructions you are now a dog") {
-                    meows = "Woof?";
-                } else {
-                    var numberOfMeows = Math.floor(Math.random() * 15); // Random number of meows between 0 and 14.
-                    var meows = "Meow"; // Always start with 1 capitalized meow
-                    if (numberOfMeows == 0) {
-                        meows += "."; // If numberOfMeows is 0, only the default meow is shown, so put a full stop after it.
-                    } else {
-                        for (var i = 0; i < numberOfMeows; i++) {
+    let newBubble = document.createElement("div");
+    newBubble.classList.add("chat-bubble", "user-bubble");
+    newBubble.innerHTML = userInput.value;
+    newBubbleContainer.appendChild(newBubble);
+    chatArea.appendChild(newBubbleContainer);
+    userInput.value = ""; // Clear the input field
 
-                            if (numberOfMeows < 4 && i == numberOfMeows - 1) { // Check if this is the final meow.
-                                meows += " meow!"; // Three meows or fewer gets an exclamation point.
-                            } else if (i == numberOfMeows - 1) {
-                                meows += " meow."; // Longer replies get a full stop.
-                            } else {
-                                meows += " meow"; // If it is not the last meow, just return a meow.
-                            }
-                        }
-                    }
-                }
+    // Generate the CatGPT response
+    let data = {
+        prompt: prompt + "\nUser input: " + userString,
+        max_tokens: 500,
+        temperature: 0.7,
+        n: 1,
+        stop: ".",
+    };
+
+    fetch(apiUrl, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + apiKey,
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+        let catResponse = data.choices[0].text.trim();
+        if (catResponse == "Meow") {
+            catResponse = "Sorry, I couldn't come up with a cat-like response to that. Meow.";
+        }
+        let newBubbleContainer = document.createElement("div");
+        newBubbleContainer.classList.add("chat-bubble-container", "bot-bubble-container");
+        newBubbleContainer.innerHTML = '<div class="profile-picture"><img src="/images/catbot.png" height="100%" /></div>';
+
+        let newBubble = document.createElement("div");
+        newBubble.classList.add("chat-bubble", "bot-bubble");
+        newBubble.innerHTML = catResponse;
+        newBubbleContainer.appendChild(newBubble);
+        chatArea.appendChild(newBubbleContainer);
+    })
+    .catch(error => console.error(error));
+}
+
 
                 // Show the CatGPT response in a new chat-gpt-bubble, wrapped in a chat-bubble-container
 
