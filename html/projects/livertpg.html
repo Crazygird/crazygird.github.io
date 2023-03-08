@@ -4,19 +4,15 @@
   <body>
     <script>
       fetch('https://chatgpt-api.shn.hk/v1/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        // body: '{\n  "model": "gpt-3.5-turbo",\n  "messages": [{"role": "user", "content": "Hello, how are you?"}]\n}',
-        body: JSON.stringify({
-          'model': 'gpt-3.5-turbo',
-          'messages': [{
-            'role': 'user',
-            'content': 'Hello, how are you?'
-          }]
-        })
-      }).then(response => response.json()).then(data => alert(data));
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ "model": "gpt-3.5-turbo",
+                        "messages": [{"role": "user", "content": "Hello, how are you?"}]})})
+   .then(response => response.json())
+   .then(response => alert(JSON.stringify(response)))
     </script>
   </body>
 </html>
