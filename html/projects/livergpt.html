@@ -6,29 +6,18 @@
   <body>
     <script>
       
-      const data = JSON.stringify({
-  "model": "gpt-3.5-turbo",
-  "messages": [
-    {
-      "role": "user",
-      "content": "Hello, how are you?"
-    }
-  ]
-});
-
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === this.DONE) {
-    console.log(this.responseText);
+      fetch("https://chatgpt-api.shn.hk/v1/", {
+  method: "POST",
+  body: JSON.stringify({
+    model: "gpt-3.5-turbo",
+    messages: [{"role": "user", "content": "Hello, how are you?"}]
+  }),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8"
   }
-});
-
-xhr.open("POST", "https://chatgpt-api.shn.hk/v1/");
-xhr.setRequestHeader("Content-Type", "application/json");
-
-xhr.send(data);
+})
+  .then((response) => response.json())
+  .then((json) => alert(json));
 
     </script>
   </body>
