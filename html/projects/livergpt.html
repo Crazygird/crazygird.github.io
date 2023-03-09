@@ -10,7 +10,27 @@
     <script>
 
       
-fetch('https://chatgpt-api.shn.hk/v1/', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: 'gpt-3.5-turbo', messages: [{ role: 'user', content: 'write a story about noah, who make youtube videos. the videos he made were called edits and they were very low quality. but by the end of the story noah realizes that he needs to make better and higher quality youtube videos.' }] }) }) .then(response => response.json()) .then(data => alert(JSON.stringify(data))) .catch(error => console.error(error));
+$.ajax({
+  url: 'https://chatgpt-api.shn.hk/v1/',
+  type: 'POST',
+  contentType: 'application/json',
+  data: JSON.stringify({
+    model: 'gpt-3.5-turbo',
+    messages: [
+      {
+        role: 'user',
+        content:
+          'write a story about noah, who make youtube videos. the videos he made were called edits and they were very low quality. but by the end of the story noah realizes that he needs to make better and higher quality youtube videos.',
+      },
+    ],
+  }),
+  success: function(data) {
+    alert(JSON.stringify(data));
+  },
+  error: function() {
+    console.error('Request failed');
+  },
+});
     </script>
   </body>
 </html>
