@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
   <body>
     <script>
-      const axios = require('axios');
+      //const axios = require('axios');
+      
+    
 
 const data = {
   model: 'gpt-3.5-turbo',
@@ -20,6 +24,7 @@ const config = {
     'Content-Type': 'application/json'
   }
 };
+
 
 axios.post('https://chatgpt-api.shn.hk/v1/', data, config)
   .then(response => {
