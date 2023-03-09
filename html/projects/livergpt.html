@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
     <p id="response"></p>
     <input id="textbox" type="text" placeholder="Ask ChatGPT...">
     <script>
-      const response = document.getElementById("response");
-
-      fetch("https://chatgpt-api.shn.hk/v1/", {
-  method: "POST",
-  body: JSON.stringify({
-    model: "gpt-3.5-turbo",
-    messages: [{"role": "user", "content": "Hello, how are you?"}]
-  }),
-  headers: {
-    "Content-type": "application/json; charset=UTF-8"
-  }
-})
-  .then((response) => response.json())
-  .then((json) => alert(json));
-
+      
+      const body = {
+    userId: 1,
+    title: "Fix my bugs",
+    completed: false
+    };
+$.post("https://chatgpt-api.shn.hk/v1/", body, (data, status) => {
+  alert(data);
+});
     </script>
   </body>
 </html>
