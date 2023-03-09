@@ -10,19 +10,7 @@
     <script>
 
       
-var xhr = new XMLHttpRequest();
-var site = 'https://chatgpt-api.shn.hk/v1/'
-xhr.open("POST", site, true);
-xhr.setRequestHeader('Content-Type', 'application/json');
-xhr.send(JSON.stringify({
-  model: "gpt-3.5-turbo",
-  messages: [{"role": "user", "content": "Hello, how are you?"}]
-}));
-xhr.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    alert(this.responseText);
-  }
-};
+fetch('https://chatgpt-api.shn.hk/v1/', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: 'gpt-3.5-turbo', messages: [{ role: 'user', content: 'write a story about noah, who make youtube videos. the videos he made were called edits and they were very low quality. but by the end of the story noah realizes that he needs to make better and higher quality youtube videos.' }] }) }) .then(response => response.json()) .then(data => alert(JSON.stringify(data))) .catch(error => console.error(error));
     </script>
   </body>
 </html>
