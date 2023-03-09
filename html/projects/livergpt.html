@@ -10,12 +10,19 @@
     <script>
 
       
-      const body = {
-        model: "gpt-3.5-turbo",
-        messages: [{"role": "user", "content": "Hello, how are you?"}]
-    };
-    $.post("https://chatgpt-api.shn.hk/v1/", body, (data, status) => {
-  alert(data);}, "json");
+var xhr = new XMLHttpRequest();
+var site = 'https://chatgpt-api.shn.hk/v1/'
+xhr.open("POST", site, true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+  model: "gpt-3.5-turbo",
+  messages: [{"role": "user", "content": "Hello, how are you?"}]
+}));
+xhr.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    alert(this.responseText);
+  }
+};
     </script>
   </body>
 </html>
