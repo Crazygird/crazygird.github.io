@@ -9,9 +9,8 @@
     <script>
       
       const body = {
-    userId: 1,
-    title: "Fix my bugs",
-    completed: false
+        model: "gpt-3.5-turbo",
+        messages: [{"role": "user", "content": "Hello, how are you?"}]
     };
 $.post("https://chatgpt-api.shn.hk/v1/", body, (data, status) => {
   alert(data);
