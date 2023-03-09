@@ -4,8 +4,11 @@
     
   </head>
   <body>
+    <p id="response"></p>
+    <input id="textbox" type="text" placeholder="Ask ChatGPT...">
     <script>
-      
+      const response = document.getElementById("response");
+
       fetch("https://chatgpt-api.shn.hk/v1/", {
   method: "POST",
   body: JSON.stringify({
