@@ -5,29 +5,30 @@
   </head>
   <body>
     <script>
-      //const axios = require('axios');
       
-      fetch('https://chatgpt-api.shn.hk/v1/', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    // body: '{\n  "model": "gpt-3.5-turbo",\n  "messages": [{"role": "user", "content": "Hello, how are you?"}]\n}',
-    body: JSON.stringify({
-        'model': 'gpt-3.5-turbo',
-        'messages': [
-            {
-                'role': 'user',
-                'content': 'Hello, how are you?'
-            }
-        ]
-    })
-    .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error))
+      const data = JSON.stringify({
+  "model": "gpt-3.5-turbo",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello, how are you?"
+    }
+  ]
 });
-  
 
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "https://chatgpt-api.shn.hk/v1/");
+xhr.setRequestHeader("Content-Type", "application/json");
+
+xhr.send(data);
 
     </script>
   </body>
