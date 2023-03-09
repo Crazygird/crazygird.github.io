@@ -9,16 +9,6 @@
     <button id="button">Send</button>
     <script>
 
-$('#response').click(() => {
-  const body = {
-    model: "gpt-3.5-turbo",
-    messages: [{"role": "user", "content": $('#textbox').val()}]
-  };
-
-  $.post("https://chatgpt-api.shn.hk/v1/", body, (data, status) => {
-    alert(data);
-  });
-});
       
       const body = {
         model: "gpt-3.5-turbo",
