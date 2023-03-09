@@ -1,1 +1,0 @@
-$settings['block_interest_cohort'] = false
