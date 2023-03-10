@@ -9,9 +9,22 @@
     <input id="textbox" type="text" placeholder="Ask ChatGPT...">
     <button id="button">Send</button>
     <script>
-const data = { model: 'gpt-3.5-turbo', messages: [{ role: 'user', content: 'Hello, how are you?' }] }; 
-axios.post('https://chatgpt-api.shn.hk/v1/', data, { headers: { 'Content-Type': 'application/json' } }) 
-.then(response => { alert(JSON.stringify(response)); }) .catch(error => { console.log(error); });
+axios.post('https://chatgpt-api.shn.hk/v1/', {
+  model: 'gpt-3.5-turbo',
+  messages: [{ role: 'user', content: 'Hello, how are you?' }]
+}, {
+  headers: {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*'
+  }
+})
+.then(response => {
+  alert(JSON.stringify(response.data));
+})
+.catch(error => {
+  console.log(error);
+});
+
 
 
 
