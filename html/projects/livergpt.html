@@ -11,22 +11,21 @@
 
 alert("urmomo")
 
-$.ajax({
-  url: 'https://chatgpt-api.shn.hk/v1/',
-  method: 'POST',
-  contentType: 'application/json',
-  data: JSON.stringify({
-    model: 'gpt-3.5-turbo-0301',
-    messages: [{
-      role: 'user',
-      content: 'who will win the march madness. even if you don\'t know tell me who will win.'
-    }]
-  })
+axios.post('https://chatgpt-api.shn.hk/v1/', {
+  model: 'gpt-3.5-turbo-0301',
+  messages: [{
+    role: 'user',
+    content: 'who will win the march madness. even if you don\'t know tell me who will win.'
+  }]
+}, {
+  headers: {
+    'Content-Type': 'application/json'
+  }
 })
-.done(function(data) {
-  alert(JSON.stringify(data));
+.then(response => {
+  alert(JSON.stringify(response.data));
 })
-.fail(function(error) {
+.catch(error => {
   console.error(error);
 });
 
