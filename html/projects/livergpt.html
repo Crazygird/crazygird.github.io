@@ -9,20 +9,24 @@
     <button id="button">Send</button>
     <script>
 
-axios.post('https://chatgpt-api.shn.hk/v1/', {
-  model: 'gpt-3.5-turbo',
-  messages: [{ role: 'user', content: 'Hello, how are you?' }]
-}, {
-  headers: {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*'
-  }
-})
-.then(response => {
-  alert(JSON.stringify(response));
-})
-.catch(error => {
-  console.log(error);
+
+
+$.ajax({
+    type: "POST",
+    url: "https://chatgpt-api.shn.hk/v1/",
+    contentType: "application/json",
+    data: JSON.stringify({
+        "model": "gpt-3.5-turbo",
+        "messages": [
+            {"role": "user", "content": "Hello, how are you?"}
+        ]
+    }),
+    success: function(response) {
+        console.log(response);
+    },
+    error: function(error) {
+        console.log(error);
+    }
 });
 
 
