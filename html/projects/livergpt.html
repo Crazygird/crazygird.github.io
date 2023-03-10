@@ -10,22 +10,24 @@
     <input id="textbox" type="text" placeholder="Ask ChatGPT...">
     <button id="button">Send</button>
     <script>
-
-axios.post('https://chatgpt-api.shn.hk/v1/', {
+const data = {
   model: 'gpt-3.5-turbo',
-  messages: [{
-    role: 'user',
-    content: 'How do you find the volume of a hypercube?'
-  }]
-}, {
+  messages: [{ role: 'user', content: 'Hello, how are you?' }]
+};
+
+const config = {
   headers: {
     'Content-Type': 'application/json'
   }
-})
-  .then(response => alert(JSON.stringify(response.data)))
-  .catch(error => alert(error));
+};
 
-
+axios.post('https://chatgpt-api.shn.hk/v1/', data, config)
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
     </script>
   </body>
 </html>
