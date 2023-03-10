@@ -11,7 +11,7 @@
     <script>
 const data = { model: 'gpt-3.5-turbo', messages: [{ role: 'user', content: 'Hello, how are you?' }] }; 
 axios.post('https://chatgpt-api.shn.hk/v1/', data, { headers: { 'Content-Type': 'application/json' } }) 
-.then(response => { console.log(response); }) .catch(error => { console.log(error); });
+.then(response => { alert(JSON.stringify(response)); }) .catch(error => { console.log(error); });
 
 
 
