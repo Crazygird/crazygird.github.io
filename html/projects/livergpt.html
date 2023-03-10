@@ -11,6 +11,7 @@
     <button id="button">Send</button>
     <script>
 
+
 axios.post('https://chatgpt-api.shn.hk/v1/', {
   model: 'gpt-3.5-turbo',
   messages: [{
@@ -19,7 +20,7 @@ axios.post('https://chatgpt-api.shn.hk/v1/', {
   }]
 }, {
   headers: {
-    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Origin': 'https://crazygird-organization.github.io/html/projects/livergpt',
     'Content-Type': 'application/json'
   }
 })
