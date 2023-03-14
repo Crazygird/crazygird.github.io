@@ -147,6 +147,9 @@
     if (x.document.getElementById("Pass").value === "outdoorschool") {
       uframe.remove();
       clearInterval(interval);
+    } else {
+      var self = window
+      self.close()
     }
   }, 100);
 }
